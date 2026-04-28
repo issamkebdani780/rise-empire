@@ -40,7 +40,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Solution Enterprise
+              {t('solution_enterprise')}
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white dark:text-gradient">
@@ -71,7 +71,7 @@ const Hero = () => {
                   icon={LayoutGrid} 
                   label={t('active_stores')} 
                   value="7" 
-                  subvalue="Multi-brand Sync" 
+                  subvalue={t('multi_brand_sync')} 
                 />
                 <MetricCard 
                   icon={Box} 
@@ -83,22 +83,22 @@ const Hero = () => {
                   icon={Warehouse} 
                   label={t('warehouses')} 
                   value="4" 
-                  subvalue="Logistique Centrale" 
+                  subvalue={t('logistique_centrale')} 
                 />
                 <MetricCard 
                   icon={Users} 
                   label={t('employees')} 
                   value="83" 
-                  subvalue="12 Départements" 
+                  subvalue={`12 ${t('departements')}`}
                 />
               </div>
 
               <div className="mt-6 glass-card p-4 border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-black/40">
                 <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs font-bold text-text-muted uppercase tracking-widest">Couverture Géographique</span>
+                  <span className="text-xs font-bold text-text-muted uppercase tracking-widest">{t('couverture_geographique')}</span>
                   <div className="flex gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] text-emerald-500 font-mono">LIVE FEED</span>
+                    <span className="text-[10px] text-emerald-500 font-mono">{t('live_feed')}</span>
                   </div>
                 </div>
                 
@@ -129,7 +129,7 @@ const Hero = () => {
                 <LayoutGrid className="w-4 h-4 md:w-5 md:h-5 text-primary" />
               </div>
               <div>
-                <p className="text-[7px] md:text-[8px] text-text-muted uppercase font-bold tracking-widest">Boutiques</p>
+                <p className="text-[7px] md:text-[8px] text-text-muted uppercase font-bold tracking-widest">{t('boutiques')}</p>
                 <p className="text-xs md:text-sm font-bold text-slate-900 dark:text-white">{t('active_sync')}</p>
               </div>
             </div>

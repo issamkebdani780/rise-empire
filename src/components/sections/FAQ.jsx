@@ -36,6 +36,18 @@ const FAQ = () => {
     {
       question: "Une API est-elle disponible ?",
       answer: "Oui, nous offrons une API REST complète."
+    },
+    {
+      question: "White label possible ?",
+      answer: "Oui, la solution peut être personnalisée à votre image avec votre propre branding."
+    },
+    {
+      question: "Support dédié ?",
+      answer: "Oui, un account manager et une équipe de support dédiée sont attribués à chaque client Enterprise."
+    },
+    {
+      question: "Migration accompagnée ?",
+      answer: "Absolument. Nous proposons un accompagnement complet lors de la migration avec une équipe technique dédiée."
     }
   ];
 

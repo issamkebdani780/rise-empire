@@ -41,7 +41,7 @@ const LeadForm = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-white/60">Ligne Directe Expert</p>
+                    <p className="text-[10px] uppercase font-bold text-white/60">{t('ligne_directe_expert')}</p>
                     <p className="font-bold">+213 (0) 555 00 00 00</p>
                   </div>
                 </div>
@@ -58,21 +58,21 @@ const LeadForm = () => {
           {/* Form Side */}
           <div className="lg:col-span-3 p-12 bg-white dark:bg-surface">
             <form className="grid md:grid-cols-2 gap-6">
-              <InputField icon={User} label="Nom Complet" placeholder="Jean Dupont" />
-              <InputField icon={Building} label="Société" placeholder="Nom de votre holding" />
-              <InputField icon={Phone} label="Téléphone" placeholder="+213..." />
-              <InputField icon={Globe} label="Pays" placeholder="Algérie, France, Maroc..." />
-              <InputField icon={ShoppingCart} label="Nombre de Boutiques" placeholder="Ex: 5" type="number" />
-              <InputField icon={ShoppingCart} label="Commandes / Mois" placeholder="Ex: 10 000" type="number" />
-              <InputField icon={Users} label="Nombre d'Employés" placeholder="Ex: 50" type="number" />
-              <InputField icon={HelpCircle} label="Besoin Principal" placeholder="Ex: Centralisation logistique" />
+              <InputField icon={User} label={t('nom_complet')} placeholder="Jean Dupont" />
+              <InputField icon={Building} label={t('societe')} placeholder="Nom de votre holding" />
+              <InputField icon={Phone} label={t('telephone')} placeholder="+213..." />
+              <InputField icon={Globe} label={t('pays')} placeholder="Algérie, France, Maroc..." />
+              <InputField icon={ShoppingCart} label={t('nombre_de_boutiques')} placeholder="Ex: 5" type="number" />
+              <InputField icon={ShoppingCart} label={t('commandes_mois')} placeholder="Ex: 10 000" type="number" />
+              <InputField icon={Users} label={t('nombre_employes')} placeholder="Ex: 50" type="number" />
+              <InputField icon={HelpCircle} label={t('besoin_principal')} placeholder="Ex: Centralisation logistique" />
               
               <div className="md:col-span-2 pt-4">
                 <button className="glow-button w-full py-4 text-lg font-bold flex items-center justify-center gap-2">
                   {t('expert')} <Send className="w-5 h-5" />
                 </button>
                 <p className="text-[10px] text-text-muted text-center mt-4 uppercase tracking-widest">
-                  Données protégées par chiffrement 256-bit. Aucun spam garanti.
+                  {t('donnees_protegees')}
                 </p>
               </div>
             </form>

@@ -2,12 +2,12 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Check, ArrowRight } from 'lucide-react';
 
-const PricingCard = ({ title, price, subtitle, features, cta, popular }) => (
+const PricingCard = ({ title, price, subtitle, features, cta, popular, recommendedLabel }) => (
   <div className={`glass-card p-8 flex flex-col relative ${popular
       ? 'border-primary bg-primary/5 ring-1 ring-primary/20'
       : 'border-slate-200 dark:border-white/5 bg-white dark:bg-transparent shadow-lg dark:shadow-none'
     }`}>
-    {popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-[10px] font-bold text-white rounded-full uppercase tracking-widest">Recommandé</span>}
+    {popular && <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-[10px] font-bold text-white rounded-full uppercase tracking-widest">{recommendedLabel}</span>}
     <div className="mb-8">
       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{title}</h3>
       <p className="text-xs text-text-muted mb-4">{subtitle}</p>
@@ -33,26 +33,26 @@ const Pricing = () => {
   const { t } = useTranslation();
   const plans = [
     {
-      title: "Growth Group",
-      price: "Sur Devis",
-      subtitle: "Pour les structures en pleine accélération",
-      features: ["Jusqu'à 3 boutiques", "Dashboard consolidé", "Multi-utilisateurs (5)", "Support prioritaire"],
-      cta: "Contacter Sales"
+      title: t('growth_group'),
+      price: t('sur_devis'),
+      subtitle: t('pour_les_structures'),
+      features: [t('jusqu_3_boutiques'), t('dashboard_consolide'), t('multi_utilisateurs_5'), t('support_prioritaire')],
+      cta: t('contacter_sales')
     },
     {
-      title: "Business Group",
-      price: "Sur Devis",
-      subtitle: "Pour les holdings e-commerce solides",
+      title: t('business_group'),
+      price: t('sur_devis'),
+      subtitle: t('pour_les_holdings'),
       popular: true,
-      features: ["Boutiques illimitées", "Dashboard Executive", "Permissions avancées", "API & Webhooks", "Account Manager"],
-      cta: "Demander démo"
+      features: [t('boutiques_illimitees'), t('dashboard_executive'), t('permissions_avancees_feat'), t('api_webhooks'), t('account_manager')],
+      cta: t('demander_demo')
     },
     {
-      title: "Enterprise Custom",
-      price: "Custom",
-      subtitle: "Besoins spécifiques & gros volumes",
-      features: ["Architecture dédiée", "Migration accompagnée", "Développement sur-mesure", "SLA 99.9%", "White label"],
-      cta: "Parler à un expert"
+      title: t('enterprise_custom'),
+      price: t('custom'),
+      subtitle: t('besoins_specifiques'),
+      features: [t('architecture_dediee'), t('migration_accompagnee'), t('developpement_sur_mesure'), t('sla_99_9'), t('white_label')],
+      cta: t('parler_expert')
     }
   ];
 
@@ -64,7 +64,9 @@ const Pricing = () => {
           <p className="text-text-muted max-w-2xl mx-auto">{t('pricing_desc')}</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {plans.map((p, i) => <PricingCard key={i} {...p} />)}
+          {plans.map((p, i) => (
+            <PricingCard key={i} {...p} recommendedLabel={t('recommande')} />
+          ))}
         </div>
       </div>
     </section>

@@ -27,40 +27,40 @@ const HierarchyPermissions = () => {
   const { t } = useTranslation();
   const roles = [
     {
-      role: "CEO / Owner",
+      role: t('ceo_owner'),
       icon: Shield,
-      description: "Vision Totale",
-      permissions: ["Accès global finance", "Audit complet", "Gestion des managers", "Export data groupe"]
+      description: t('vision_totale'),
+      permissions: [t('acces_global_finance'), t('audit_complet'), t('gestion_managers'), t('export_data_groupe')]
     },
     {
-      role: "Directeur Ops",
+      role: t('directeur_ops'),
       icon: Settings,
-      description: "Logistique & Flux",
-      permissions: ["Vue multi-entrepôts", "Performance stocks", "Flux de commandes", "Validations RH"]
+      description: t('logistique_flux'),
+      permissions: [t('vue_multi_entrepots'), t('performance_stocks'), t('flux_de_commandes'), t('validations_rh')]
     },
     {
-      role: "Manager Boutique",
+      role: t('manager_boutique'),
       icon: Briefcase,
-      description: "Performance Marque",
-      permissions: ["Gestion boutique dédiée", "Kpis vente / conversion", "Support client local", "Stock dédié"]
+      description: t('performance_marque'),
+      permissions: [t('gestion_boutique_dediee'), t('kpis_vente_conversion'), t('support_client_local'), t('stock_dedie')]
     },
     {
-      role: "Responsable Dépôt",
+      role: t('responsable_depot'),
       icon: Truck,
-      description: "Logistique Terrain",
-      permissions: ["Préparation commandes", "Inventaires live", "Scanning produits", "Gestion retours"]
+      description: t('logistique_terrain'),
+      permissions: [t('preparation_commandes'), t('inventaires_live'), t('scanning_produits'), t('gestion_retours')]
     },
     {
-      role: "Media Buyer",
+      role: t('media_buyer'),
       icon: BarChart,
-      description: "Acquisition",
-      permissions: ["Accès Ads / Marketing", "Tracking pixels", "Reporting ROI", "Dashboards publicitaires"]
+      description: t('acquisition'),
+      permissions: [t('acces_ads_marketing'), t('tracking_pixels'), t('reporting_roi'), t('dashboards_publicitaires')]
     },
     {
-      role: "Call Center",
+      role: t('call_center'),
       icon: Phone,
-      description: "Relation Client",
-      permissions: ["Gestion appels", "Validation commandes", "Suivi colis", "Historique client"]
+      description: t('relation_client'),
+      permissions: [t('gestion_appels'), t('validation_commandes'), t('suivi_colis'), t('historique_client')]
     }
   ];
 

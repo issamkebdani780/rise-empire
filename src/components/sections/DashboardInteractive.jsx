@@ -55,7 +55,7 @@ const DashboardInteractive = () => {
                 </div>
               </div>
               <div className="glass-card p-4 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">Taux Confirmation</p>
+                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('taux_confirmation')}</p>
                 <div className="flex items-end justify-between">
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white">84.2%</h4>
                   <span className="text-[10px] font-bold text-emerald-500 flex items-center gap-1">
@@ -67,7 +67,7 @@ const DashboardInteractive = () => {
 
             <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 min-h-[300px]">
               <div className="flex justify-between items-center mb-10">
-                <h5 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">Performance Groupe (30j)</h5>
+                <h5 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest">{t('performance_groupe')}</h5>
                 <div className="flex gap-4">
                   <div className="flex items-center gap-2 text-[10px] font-bold text-text-muted">
                     <div className="w-2.5 h-2.5 rounded-sm bg-primary" /> CA
@@ -110,20 +110,20 @@ const DashboardInteractive = () => {
             <table className="w-full text-left">
               <thead>
                 <tr className="bg-slate-50 dark:bg-white/5 text-[10px] uppercase tracking-widest text-text-muted font-black">
-                  <th className="px-6 py-4">Boutique</th>
-                  <th className="px-6 py-4">Status</th>
-                  <th className="px-6 py-4">CA (24h)</th>
-                  <th className="px-6 py-4">Confirm.</th>
-                  <th className="px-6 py-4 text-right">Action</th>
+                  <th className="px-6 py-4">{t('boutique')}</th>
+                  <th className="px-6 py-4">{t('status')}</th>
+                  <th className="px-6 py-4">{t('ca_24h')}</th>
+                  <th className="px-6 py-4">{t('confirm')}</th>
+                  <th className="px-6 py-4 text-right">{t('action')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-white/5">
                 {[
-                  { name: 'Elite Electronics', status: 'Growing', ca: '842,000 DA', conf: '88%', color: 'text-emerald-500' },
-                  { name: 'LuxDecor Boutique', status: 'Stable', ca: '412,500 DA', conf: '82%', color: 'text-primary' },
-                  { name: 'Cosmetic Pro', status: 'Warning', ca: '124,000 DA', conf: '64%', color: 'text-amber-500' },
-                  { name: 'Urban Fashion', status: 'Hot', ca: '984,200 DA', conf: '92%', color: 'text-rose-500' },
-                  { name: 'Home Essentials', status: 'Stable', ca: '320,000 DA', conf: '78%', color: 'text-primary' },
+                  { name: 'Elite Electronics', status: t('growing'), ca: '842,000 DA', conf: '88%', color: 'text-emerald-500' },
+                  { name: 'LuxDecor Boutique', status: t('stable'), ca: '412,500 DA', conf: '82%', color: 'text-primary' },
+                  { name: 'Cosmetic Pro', status: t('warning'), ca: '124,000 DA', conf: '64%', color: 'text-amber-500' },
+                  { name: 'Urban Fashion', status: t('hot'), ca: '984,200 DA', conf: '92%', color: 'text-rose-500' },
+                  { name: 'Home Essentials', status: t('stable'), ca: '320,000 DA', conf: '78%', color: 'text-primary' },
                 ].map((m, i) => (
                   <tr key={i} className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <td className="px-6 py-4">
@@ -142,7 +142,7 @@ const DashboardInteractive = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right">
-                      <button className="text-primary hover:underline text-[10px] font-bold">Ouvrir</button>
+                      <button className="text-primary hover:underline text-[10px] font-bold">{t('ouvrir')}</button>
                     </td>
                   </tr>
                 ))}

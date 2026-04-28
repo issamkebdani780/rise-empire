@@ -27,19 +27,19 @@ const Security = () => {
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-slate-900 dark:text-white">99.9%</span>
-                  <span className="text-[10px] text-text-muted uppercase font-bold tracking-widest">Uptime Garanti</span>
+                  <span className="text-[10px] text-text-muted uppercase font-bold tracking-widest">{t('uptime_garanti')}</span>
                 </div>
                 <div className="w-px h-10 bg-slate-200 dark:bg-white/10" />
                 <div className="flex flex-col">
                   <span className="text-3xl font-bold text-slate-900 dark:text-white">256-bit</span>
-                  <span className="text-[10px] text-text-muted uppercase font-bold tracking-widest">Chiffrement AES</span>
+                  <span className="text-[10px] text-text-muted uppercase font-bold tracking-widest">{t('chiffrement_aes')}</span>
                 </div>
               </div>
             </div>
             <div className="grid gap-8">
-              <SecurityFeature icon={Fingerprint} title="Accès Sécurisés" description="Authentification multi-facteurs (2FA) et logs d'accès détaillés." />
-              <SecurityFeature icon={Layers} title="Historique Actions" description="Chaque modification est tracée. Qui a fait quoi, quand." />
-              <SecurityFeature icon={Database} title="Backups Automatiques" description="Sauvegarde en temps réel sur plusieurs serveurs." />
+              <SecurityFeature icon={Fingerprint} title={t('acces_securises')} description={t('authentification_multifactor')} />
+              <SecurityFeature icon={Layers} title={t('historique_actions')} description={t('chaque_modification_tracee')} />
+              <SecurityFeature icon={Database} title={t('backups_automatiques')} description={t('sauvegarde_temps_reel')} />
             </div>
           </div>
         </div>

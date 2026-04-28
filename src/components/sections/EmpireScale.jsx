@@ -24,21 +24,21 @@ const EmpireScale = () => {
   const { t } = useTranslation();
 
   const problems = [
-    { icon: EyeOff, title: "Données Dispersées", description: "Naviguer entre 5 onglets différents pour comprendre votre CA global est une perte de temps stratégique." },
-    { icon: UserX, title: "Managers sans Vision", description: "Vos responsables d'équipes n'ont pas accès aux KPIs dont ils ont besoin pour agir en autonomie." },
-    { icon: Clock, title: "Reporting Lent", description: "Le temps de compiler les chiffres, l'opportunité est déjà passée. Vous pilotez dans le rétroviseur." },
-    { icon: Search, title: "Pertes Invisibles", description: "Des erreurs de stock ou des baisses de profit qui passent inaperçues jusqu'à ce qu'il soit trop tard." },
-    { icon: Link2, title: "Équipes Cloisonnées", description: "Le Call Center ne sait pas ce que font les Media Buyers. L'information ne circule pas." },
-    { icon: AlertCircle, title: "Patron Saturé", description: "Vous devenez le goulot d'étranglement car chaque décision opérationnelle doit passer par vous." },
+    { icon: EyeOff, title: t('donnees_dispersées').split(' ').slice(0,2).join(' '), description: t('donnees_dispersées') },
+    { icon: UserX, title: t('managers_sans_vision').split(' ').slice(0,2).join(' '), description: t('managers_sans_vision') },
+    { icon: Clock, title: t('reporting_lent').split(' ').slice(0,2).join(' '), description: t('reporting_lent') },
+    { icon: Search, title: t('pertes_invisibles').split(' ').slice(0,2).join(' '), description: t('pertes_invisibles') },
+    { icon: Link2, title: t('equipes_cloisonnées').split(' ').slice(0,2).join(' '), description: t('equipes_cloisonnées') },
+    { icon: AlertCircle, title: t('patron_saturé').split(' ').slice(0,2).join(' '), description: t('patron_saturé') },
   ];
 
   const promises = [
-    { icon: LayoutGrid, title: "Multi-boutiques", description: "Centralisez Shopify, WooCommerce et vos boutiques personnalisées sur un seul écran." },
-    { icon: Users, title: "Multi-utilisateurs", description: "Gérez des dizaines d'employés avec des espaces de travail dédiés et sécurisés." },
-    { icon: Warehouse, title: "Multi-entrepôts", description: "Vision temps réel des stocks répartis sur plusieurs zones géographiques." },
-    { icon: ShieldCheck, title: "Permissions Avancées", description: "Contrôlez précisément qui voit quoi. Protégez vos données sensibles." },
-    { icon: BarChart3, title: "Reporting Consolidé", description: "Tableaux de bord automatiques pour le groupe, par marque ou par employé." },
-    { icon: Bell, title: "Alertes Intelligentes", description: "Notifications push pour les anomalies critiques nécessitant votre attention immédiate." },
+    { icon: LayoutGrid, title: t('multi_boutiques').split(' ').slice(0,2).join(' '), description: t('multi_boutiques') },
+    { icon: Users, title: t('multi_utilisateurs').split(' ').slice(0,2).join(' '), description: t('multi_utilisateurs') },
+    { icon: Warehouse, title: t('multi_entrepots').split(' ').slice(0,2).join(' '), description: t('multi_entrepots') },
+    { icon: ShieldCheck, title: t('permissions_avancees').split(' ').slice(0,2).join(' '), description: t('permissions_avancees') },
+    { icon: BarChart3, title: t('reporting_consolide').split(' ').slice(0,2).join(' '), description: t('reporting_consolide') },
+    { icon: Bell, title: t('alertes_intelligentes').split(' ').slice(0,2).join(' '), description: t('alertes_intelligentes') },
   ];
 
   return (

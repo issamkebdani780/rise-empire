@@ -20,11 +20,11 @@ const AlertRow = ({ icon: Icon, title, status, color }) => (
 const ExecutiveAutomation = () => {
   const { t } = useTranslation();
   const alerts = [
-    { icon: TrendingDown, title: "Chute Profit Boutique X", status: "Alerte Critique - Marge < 15%", color: "bg-red-500/20" },
-    { icon: Package, title: "Stock Critique Produit Y", status: "Elite Electronics - 12 unités restantes", color: "bg-amber-500/20" },
-    { icon: Clock, title: "Retard Dépôt Z", status: "82 commandes en attente > 24h", color: "bg-orange-500/20" },
-    { icon: Zap, title: "Explosion CPA Campagne A", status: "Facebook Ads - CPA > 8€ (Seuil 5€)", color: "bg-purple-500/20" },
-    { icon: Trophy, title: "Top Vendeur Semaine", status: "Agent Ahmed - 142 validations", color: "bg-emerald-500/20" },
+    { icon: TrendingDown, title: t('chute_profit_boutique'), status: t('alerte_critique_marge'), color: "bg-red-500/20" },
+    { icon: Package, title: t('stock_critique_produit'), status: "Elite Electronics - 12 " + t('unites_restantes'), color: "bg-amber-500/20" },
+    { icon: Clock, title: t('retard_depot'), status: "82 " + t('commandes_en_attente'), color: "bg-orange-500/20" },
+    { icon: Zap, title: t('explosion_cpa'), status: t('facebook_ads') + " - " + t('cpa_seuil'), color: "bg-purple-500/20" },
+    { icon: Trophy, title: t('top_vendeur_semaine'), status: t('agent_ahmed') + " - 142 " + t('validations'), color: "bg-emerald-500/20" },
   ];
 
   return (
@@ -41,8 +41,8 @@ const ExecutiveAutomation = () => {
           <div className="relative">
             <div className="glass-card p-2 border-slate-200 dark:border-white/10 bg-white dark:bg-black/60 shadow-2xl">
               <div className="p-4 border-b border-slate-100 dark:border-white/10 flex justify-between items-center">
-                <span className="text-xs font-bold text-text-muted uppercase tracking-widest">Centre d'Alertes Stratégiques</span>
-                <span className="text-[10px] text-primary font-mono px-2 py-0.5 bg-primary/10 rounded">LIVE FEED</span>
+                <span className="text-xs font-bold text-text-muted uppercase tracking-widest">{t('centre_alertes_strategiques')}</span>
+                <span className="text-[10px] text-primary font-mono px-2 py-0.5 bg-primary/10 rounded">{t('live_feed')}</span>
               </div>
               <div className="p-4 space-y-3">
                 {alerts.map((a, i) => <AlertRow key={i} {...a} />)}
