@@ -6,6 +6,7 @@ import {
   TrendingUp, ArrowUpRight, ArrowDownRight, Package,
   DollarSign, CheckCircle2, Clock, AlertCircle
 } from 'lucide-react';
+import MapUI from './Mapui';
 
 const DashboardInteractive = () => {
   const { t } = useTranslation();
@@ -327,54 +328,8 @@ const DashboardInteractive = () => {
         );
       case 'Carte':
         return (
-          <div className="glass-card p-8 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 h-[400px] relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
-             <div className="absolute inset-0 opacity-10 flex items-center justify-center">
-                <Globe className="w-96 h-96 text-primary" />
-             </div>
-             <div className="relative z-10 flex flex-col h-full">
-                <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-10">Expansion Géographique & Zones de Vente</h5>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 flex-1">
-                   <div className="space-y-6">
-                      <div className="space-y-2">
-                         <div className="flex items-center justify-between text-xs font-bold">
-                            <span className="text-slate-900 dark:text-white">Algerie (Nord)</span>
-                            <span className="text-emerald-500">68%</span>
-                         </div>
-                         <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
-                            <div className="h-full bg-emerald-500" style={{ width: '68%' }} />
-                         </div>
-                      </div>
-                      <div className="space-y-2">
-                         <div className="flex items-center justify-between text-xs font-bold">
-                            <span className="text-slate-900 dark:text-white">Ouest & Est</span>
-                            <span className="text-primary">24%</span>
-                         </div>
-                         <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
-                            <div className="h-full bg-primary" style={{ width: '24%' }} />
-                         </div>
-                      </div>
-                      <div className="space-y-2">
-                         <div className="flex items-center justify-between text-xs font-bold">
-                            <span className="text-slate-900 dark:text-white">Sud & Sahara</span>
-                            <span className="text-amber-500">8%</span>
-                         </div>
-                         <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
-                            <div className="h-full bg-amber-500" style={{ width: '8%' }} />
-                         </div>
-                      </div>
-                   </div>
-                   <div className="flex flex-col items-center justify-center p-8 bg-slate-900 rounded-3xl text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                         <Globe className="w-8 h-8 text-primary animate-pulse" />
-                      </div>
-                      <h4 className="text-xl font-bold text-white uppercase tracking-tighter">Alger & Oran</h4>
-                      <p className="text-[10px] text-primary font-bold uppercase mt-1">Top Hubs Logistiques</p>
-                      <div className="mt-6 text-[9px] text-slate-400 leading-relaxed italic">
-                        Les hubs de livraison en centre-ville montrent une réduction de 42% des délais sur le dernier trimestre.
-                      </div>
-                   </div>
-                </div>
-             </div>
+          <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 min-h-[450px] relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+             <MapUI />
           </div>
         );
       default:

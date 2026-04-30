@@ -27,10 +27,10 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 dark:bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-blue-400/10 dark:bg-blue-400/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[500px] h-[500px] bg-primary/10 dark:bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
-      
+
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 blur-[120px] -z-10 rounded-full" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -42,15 +42,15 @@ const Hero = () => {
               </span>
               {t('solution_enterprise')}
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white dark:text-gradient">
               {t('hero_title')}
             </h1>
-            
+
             <p className="text-xl text-text-muted max-w-xl leading-relaxed">
               {t('hero_subtitle')}
             </p>
-            
+
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="glow-button px-8 py-4 text-lg">
                 {t('reserve_demo')}
@@ -65,30 +65,30 @@ const Hero = () => {
           <div className="relative">
             <div className="glass-card p-6 border-slate-200 dark:border-white/10 shadow-2xl relative overflow-hidden bg-white/50 dark:bg-black/20">
               <div className="absolute inset-0 bg-linear-to-b from-primary/5 to-transparent pointer-events-none" />
-              
+
               <div className="grid grid-cols-2 gap-4 relative z-10">
-                <MetricCard 
-                  icon={LayoutGrid} 
-                  label={t('active_stores')} 
-                  value="7" 
-                  subvalue={t('multi_brand_sync')} 
+                <MetricCard
+                  icon={LayoutGrid}
+                  label={t('active_stores')}
+                  value="7"
+                  subvalue={t('multi_brand_sync')}
                 />
-                <MetricCard 
-                  icon={Box} 
-                  label={t('monthly_orders')} 
-                  value="12 482" 
-                  trend="+18.4%" 
+                <MetricCard
+                  icon={Box}
+                  label={t('monthly_orders')}
+                  value="12 482"
+                  trend="+18.4%"
                 />
-                <MetricCard 
-                  icon={Warehouse} 
-                  label={t('warehouses')} 
-                  value="4" 
-                  subvalue={t('logistique_centrale')} 
+                <MetricCard
+                  icon={Warehouse}
+                  label={t('warehouses')}
+                  value="4"
+                  subvalue={t('logistique_centrale')}
                 />
-                <MetricCard 
-                  icon={Users} 
-                  label={t('employees')} 
-                  value="83" 
+                <MetricCard
+                  icon={Users}
+                  label={t('employees')}
+                  value="83"
                   subvalue={`12 ${t('departements')}`}
                 />
               </div>
@@ -101,7 +101,7 @@ const Hero = () => {
                     <span className="text-[10px] text-emerald-500 font-mono">{t('live_feed')}</span>
                   </div>
                 </div>
-                
+
                 <div className="h-48 bg-slate-100 dark:bg-slate-900/50 rounded-lg relative overflow-hidden flex items-center justify-center">
                   <Globe className="w-32 h-32 text-primary/10 absolute animate-pulse-slow" />
                   <div className="relative w-full h-full p-4 flex items-center justify-center text-center">
@@ -131,12 +131,6 @@ const Hero = () => {
               <div>
                 <p className="text-[7px] md:text-[8px] text-text-muted uppercase font-bold tracking-widest">{t('boutiques')}</p>
                 <p className="text-xs md:text-sm font-bold text-slate-900 dark:text-white">{t('active_sync')}</p>
-              </div>
-            </div>
-            
-            <div className="absolute top-1/2 -right-8 md:-right-12 -translate-y-1/2 glass-card p-2 md:p-3 border-amber-500/20 bg-white/80 dark:bg-slate-900/80 shadow-2xl animate-pulse-slow z-10 rtl:right-auto rtl:-left-8 rtl:md:-left-12">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => <div key={i} className="w-1 h-2 md:h-3 bg-amber-500 rounded-full" />)}
               </div>
             </div>
           </div>

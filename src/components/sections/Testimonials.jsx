@@ -49,9 +49,42 @@ const Testimonials = () => {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 dark:text-white">Validé par les leaders du marché</h2>
-          <p className="text-text-muted max-w-2xl mx-auto">Ils ont arrêté de gérer des boutiques pour commencer à piloter un empire.</p>
+        <div className="text-center mb-20 space-y-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 shadow-sm mx-auto">
+            <span className="w-2 h-2 rounded-full bg-primary" />
+            <span className="text-[10px] font-black tracking-widest uppercase text-slate-800 dark:text-slate-200">
+              CONFIANCE & RÉSULTATS
+            </span>
+          </div>
+
+          <h2 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight max-w-4xl mx-auto">
+            Ils construisent le futur du COD en Afrique avec nous.
+          </h2>
+          
+          {/* Stats Pill */}
+          <div className="mt-12 max-w-5xl mx-auto glass-card border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/40 rounded-[40px] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 pointer-events-none" />
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 relative z-10 divide-y md:divide-y-0 md:divide-x divide-slate-100 dark:divide-white/10">
+              <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">500+</h3>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">UTILISATEURS ACTIFS</p>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">2M+</h3>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">COMMANDES GÉRÉES</p>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">3.5x</h3>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">ROI MOYEN CLIENT</p>
+              </div>
+              <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
+                <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">98%</h3>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">TAUX DE SATISFACTION</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {reviews.map((r, i) => <TestimonialCard key={i} {...r} />)}
