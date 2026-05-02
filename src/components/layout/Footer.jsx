@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="col-span-2 space-y-6">
             <Logo />
             <p className="text-text-muted text-sm max-w-xs">
-              Le centre de commandement stratégique pour les empires e-commerce modernes. Puissance, contrôle et scalabilité.
+              {t('footer_desc')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white transition-all border border-slate-100 dark:border-slate-800">
@@ -27,30 +27,30 @@ const Footer = () => {
           <div>
             <h4 className="text-slate-900 dark:text-white font-bold mb-6">{t('enterprise')}</h4>
             <ul className="space-y-4 text-sm text-text-muted">
-              <li><a href="#" className="hover:text-primary transition-colors">Modules</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Logistique</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Finance</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Sécurité</a></li>
+              <li><a href="#modules" className="hover:text-primary transition-colors">{t('modules')}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('logistique')}</a></li>
+              <li><a href="#finance" className="hover:text-primary transition-colors">{t('tab_finance')}</a></li>
+              <li><a href="#security" className="hover:text-primary transition-colors">{t('security')}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-slate-900 dark:text-white font-bold mb-6">Légal</h4>
+            <h4 className="text-slate-900 dark:text-white font-bold mb-6">{t('legal')}</h4>
             <ul className="space-y-4 text-sm text-text-muted">
-              <li><a href="#" className="hover:text-primary transition-colors">Confidentialité</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">CGV / CGU</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Mentions Légales</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('confidentiality')}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('cgv_cgu')}</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">{t('mentions_legales')}</a></li>
             </ul>
           </div>
         </div>
         
         <div className="mt-20 pt-8 border-t border-slate-100 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] text-text-muted uppercase tracking-widest">
-            © 2026 RiseManager. Propriété de Rise Technologies. Tous droits réservés.
+            {t('copyright')}
           </p>
           <div className="flex gap-6">
             <span className="text-[10px] text-emerald-500 font-bold uppercase tracking-widest flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Systems Operational
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> {t('systems_operational')}
             </span>
           </div>
         </div>

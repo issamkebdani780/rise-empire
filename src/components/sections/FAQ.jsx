@@ -26,28 +26,28 @@ const FAQ = () => {
   const { t } = useTranslation();
   const questions = [
     {
-      question: "Combien de boutiques peut-on connecter ?",
-      answer: "Dans la version Enterprise, il n'y a pas de limite technique."
+      question: t('faq_q1'),
+      answer: t('faq_a1')
     },
     {
-      question: "Peut-on séparer les équipes par boutique ?",
-      answer: "Absolument. Vous pouvez assigner des membres d'équipes spécifiques."
+      question: t('faq_q2'),
+      answer: t('faq_a2')
     },
     {
-      question: "Une API est-elle disponible ?",
-      answer: "Oui, nous offrons une API REST complète."
+      question: t('faq_q3'),
+      answer: t('faq_a3')
     },
     {
-      question: "White label possible ?",
-      answer: "Oui, la solution peut être personnalisée à votre image avec votre propre branding."
+      question: t('faq_q4'),
+      answer: t('faq_a4')
     },
     {
-      question: "Support dédié ?",
-      answer: "Oui, un account manager et une équipe de support dédiée sont attribués à chaque client Enterprise."
+      question: t('faq_q5'),
+      answer: t('faq_a5')
     },
     {
-      question: "Migration accompagnée ?",
-      answer: "Absolument. Nous proposons un accompagnement complet lors de la migration avec une équipe technique dédiée."
+      question: t('faq_q6'),
+      answer: t('faq_a6')
     }
   ];
 

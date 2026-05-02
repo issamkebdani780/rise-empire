@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { MapPin } from 'lucide-react';
 
 const CITIES = [
@@ -20,6 +21,7 @@ const TIER_COLORS = {
 };
 
 const MapUI = () => {
+  const { t } = useTranslation();
   const svgRef    = useRef(null);
   const wrapRef   = useRef(null);
   const [active, setActive]     = useState(null);
@@ -160,7 +162,7 @@ const MapUI = () => {
   const SidebarContent = () => (
     <>
       <div className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 px-1">
-        Régions actives
+        {t('active_regions')}
       </div>
       {/* Mobile: 2-col grid · Desktop: single scrollable column */}
       <div className={isMobile ? 'grid grid-cols-2 gap-1.5' : 'flex flex-col gap-1.5'}>
@@ -224,17 +226,17 @@ const MapUI = () => {
           >
             <div className="text-sm font-black dark:text-white mb-0.5">{tooltip.city.name}</div>
             <div className="text-[11px] text-slate-400 font-bold">
-              Taux: <span className="text-slate-700 dark:text-slate-200">{tooltip.city.rate}% ({tooltip.city.delta})</span>
+              {t('status')}: <span className="text-slate-700 dark:text-slate-200">{tooltip.city.rate}% ({tooltip.city.delta})</span>
             </div>
             <div className="text-[11px] text-slate-400 font-bold">
-              Commandes: <span className="text-slate-700 dark:text-slate-200">{tooltip.city.orders.toLocaleString()}</span>
+              {t('commandes')}: <span className="text-slate-700 dark:text-slate-200">{tooltip.city.orders.toLocaleString()}</span>
             </div>
           </div>
         )}
 
         <div className="absolute bottom-3 left-3 flex items-center gap-3 flex-wrap">
           {[
-            { label: '≥70% confirmé', col: '#22c55e' },
+            { label: '≥70% ' + t('confirm'), col: '#22c55e' },
             { label: '50–70%',        col: '#f59e0b' },
             { label: '<50%',          col: '#6366f1' },
           ].map(item => (
@@ -249,7 +251,7 @@ const MapUI = () => {
           <div className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full">
             <MapPin className="w-3 h-3 text-primary" />
             <span className="text-[10px] font-black text-primary uppercase tracking-widest">
-              58 Wilayas
+              {t('wilayas_58')}
             </span>
           </div>
         </div>

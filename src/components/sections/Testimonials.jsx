@@ -27,22 +27,22 @@ const Testimonials = () => {
   const { t } = useTranslation();
   const reviews = [
     {
-      quote: "On pilote 5 stores avec une seule équipe centrale. RiseManager nous a permis de réduire nos coûts opérationnels de 40% tout en doublant notre volume.",
-      author: "Samir K.",
-      role: "Fondateur",
-      company: "Horizon Group"
+      quote: t('test_quote1'),
+      author: t('test_author1'),
+      role: t('test_role1'),
+      company: t('test_company1')
     },
     {
-      quote: "Les réunions sont devenues utiles. On n'est plus là pour discuter des chiffres (ils sont sous nos yeux), mais pour décider de la stratégie de la semaine.",
-      author: "Yasmine L.",
-      role: "Directrice Ops",
-      company: "Moda Holding"
+      quote: t('test_quote2'),
+      author: t('test_author2'),
+      role: t('test_role2'),
+      company: t('test_company2')
     },
     {
-      quote: "On voit enfin où agir chaque matin. Le centre d'alertes est devenu notre premier réflexe. Plus d'erreurs de stock invisibles.",
-      author: "Karim B.",
-      role: "E-commerce Manager",
-      company: "Elite Brands"
+      quote: t('test_quote3'),
+      author: t('test_author3'),
+      role: t('test_role3'),
+      company: t('test_company3')
     }
   ];
 
@@ -54,12 +54,12 @@ const Testimonials = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900/50 shadow-sm mx-auto">
             <span className="w-2 h-2 rounded-full bg-primary" />
             <span className="text-[10px] font-black tracking-widest uppercase text-slate-800 dark:text-slate-200">
-              CONFIANCE & RÉSULTATS
+              {t('test_badge')}
             </span>
           </div>
 
           <h2 className="text-4xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight max-w-4xl mx-auto">
-            Ils construisent le futur du COD en Afrique avec nous.
+            {t('test_title')}
           </h2>
           
           {/* Stats Pill */}
@@ -69,19 +69,19 @@ const Testimonials = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 relative z-10 divide-y md:divide-y-0 md:divide-x divide-slate-100 dark:divide-white/10">
               <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
                 <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">500+</h3>
-                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">UTILISATEURS ACTIFS</p>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">{t('test_users')}</p>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
                 <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">2M+</h3>
-                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">COMMANDES GÉRÉES</p>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">{t('test_orders')}</p>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
                 <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">3.5x</h3>
-                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">ROI MOYEN CLIENT</p>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">{t('test_roi')}</p>
               </div>
               <div className="flex flex-col items-center justify-center space-y-2 py-4 md:py-0">
                 <h3 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white">98%</h3>
-                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">TAUX DE SATISFACTION</p>
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest text-center">{t('test_satisfaction')}</p>
               </div>
             </div>
           </div>

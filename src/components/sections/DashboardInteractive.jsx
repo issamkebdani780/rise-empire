@@ -27,9 +27,9 @@ const DashboardInteractive = () => {
       case 'Groupe':
         return (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="glass-card p-4 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">CA Global</p>
+                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('ca_global')}</p>
                 <div className="flex items-end justify-between">
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white">4.82M DA</h4>
                   <span className="text-[10px] font-bold text-emerald-500 flex items-center gap-1">
@@ -38,7 +38,7 @@ const DashboardInteractive = () => {
                 </div>
               </div>
               <div className="glass-card p-4 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">Profit Net</p>
+                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('profit_net_title')}</p>
                 <div className="flex items-end justify-between">
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white">1.24M DA</h4>
                   <span className="text-[10px] font-bold text-emerald-500 flex items-center gap-1">
@@ -47,7 +47,7 @@ const DashboardInteractive = () => {
                 </div>
               </div>
               <div className="glass-card p-4 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">Commandes</p>
+                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('commandes')}</p>
                 <div className="flex items-end justify-between">
                   <h4 className="text-2xl font-black text-slate-900 dark:text-white">12,482</h4>
                   <span className="text-[10px] font-bold text-red-500 flex items-center gap-1">
@@ -74,7 +74,7 @@ const DashboardInteractive = () => {
                     <div className="w-2.5 h-2.5 rounded-sm bg-primary" /> CA
                   </div>
                   <div className="flex items-center gap-2 text-[10px] font-bold text-text-muted">
-                    <div className="w-2.5 h-2.5 rounded-sm bg-emerald-500" /> Profit
+                    <div className="w-2.5 h-2.5 rounded-sm bg-emerald-500" /> {t('profit_net')}
                   </div>
                 </div>
               </div>
@@ -99,8 +99,8 @@ const DashboardInteractive = () => {
                 ))}
               </div>
               <div className="flex justify-between mt-6 text-[9px] text-text-muted font-bold px-2 uppercase tracking-tighter">
-                <span>Jan</span><span>Fev</span><span>Mar</span><span>Avr</span><span>Mai</span><span>Juin</span>
-                <span>Juil</span><span>Aout</span><span>Sept</span><span>Oct</span><span>Nov</span><span>Dec</span>
+                <span>{t('jan')}</span><span>{t('feb')}</span><span>{t('mar')}</span><span>{t('apr')}</span><span>{t('may')}</span><span>{t('jun')}</span>
+                <span>{t('jul')}</span><span>{t('aug')}</span><span>{t('sep')}</span><span>{t('oct')}</span><span>{t('nov')}</span><span>{t('dec')}</span>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const DashboardInteractive = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-              <h5 className="text-xs font-bold text-text-muted uppercase tracking-widest mb-6">Stock par Entrepôt</h5>
+              <h5 className="text-xs font-bold text-text-muted uppercase tracking-widest mb-6">{t('warehouse_stock')}</h5>
               <div className="space-y-6">
                 {[
                   { name: 'Entrepôt Alger (Centre)', cap: 84, color: 'bg-primary' },
@@ -177,8 +177,8 @@ const DashboardInteractive = () => {
             <div className="space-y-6">
               <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 flex items-center justify-between">
                 <div>
-                  <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">Vitesse de Préparation</p>
-                  <h4 className="text-2xl font-black text-primary">14.2 min</h4>
+                  <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('prep_speed')}</p>
+                  <h4 className="text-2xl font-black text-primary">14.2 {t('min')}</h4>
                 </div>
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                   <Clock className="w-6 h-6 text-primary" />
@@ -186,7 +186,7 @@ const DashboardInteractive = () => {
               </div>
               <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 flex items-center justify-between">
                 <div>
-                  <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">Alertes Stock Bas</p>
+                  <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mb-1">{t('low_stock_alerts')}</p>
                   <h4 className="text-2xl font-black text-rose-500">12 SKUs</h4>
                 </div>
                 <div className="w-12 h-12 bg-rose-500/10 rounded-full flex items-center justify-center">
@@ -200,8 +200,8 @@ const DashboardInteractive = () => {
         return (
           <div className="glass-card overflow-hidden border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 animate-in fade-in slide-in-from-bottom-4 duration-500">
              <div className="p-4 border-b border-slate-100 dark:border-white/5 flex justify-between items-center bg-slate-50 dark:bg-white/5">
-                <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest">Top Performers - Call Center</h5>
-                <span className="text-[9px] font-bold text-primary">Live Sync</span>
+                <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest">{t('top_performers_call')}</h5>
+                <span className="text-[9px] font-bold text-primary">{t('live_sync')}</span>
              </div>
              <div className="divide-y divide-slate-100 dark:divide-white/5">
                 {[
@@ -215,7 +215,7 @@ const DashboardInteractive = () => {
                       <div className="w-10 h-10 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-[11px] font-black">{a.name[0]}</div>
                       <div>
                         <div className="text-xs font-bold text-slate-900 dark:text-white">{a.name}</div>
-                        <div className="text-[10px] text-text-muted">{a.vol} traités</div>
+                        <div className="text-[10px] text-text-muted">{a.vol} {t('treated')}</div>
                       </div>
                     </div>
                     <div className="flex gap-8">
@@ -240,7 +240,7 @@ const DashboardInteractive = () => {
         return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
              <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <h5 className="text-xs font-bold text-text-muted uppercase tracking-widest mb-6">Répartition par Canal</h5>
+                <h5 className="text-xs font-bold text-text-muted uppercase tracking-widest mb-6">{t('repartition_canal')}</h5>
                 <div className="space-y-4">
                   {[
                     { name: 'Facebook Ads', val: 45, spend: '420k DA', roas: '4.2x', color: 'bg-blue-600' },
@@ -257,7 +257,7 @@ const DashboardInteractive = () => {
                         </div>
                         <div className="flex justify-between items-center text-[10px] text-text-muted">
                           <span>{c.spend}</span>
-                          <span>{c.val}% du budget</span>
+                          <span>{c.val}% {t('budget_percent')}</span>
                         </div>
                       </div>
                     </div>
@@ -267,14 +267,14 @@ const DashboardInteractive = () => {
              <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40 flex flex-col justify-center items-center text-center">
                 <PieChart className="w-20 h-20 text-primary/10 mb-6" />
                 <h4 className="text-3xl font-black text-slate-900 dark:text-white">914,500 DA</h4>
-                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mt-2">Dépense Totale (30j)</p>
+                <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mt-2">{t('total_spend_30j')}</p>
                 <div className="mt-6 flex gap-4">
                    <div className="px-4 py-2 bg-emerald-500/10 rounded-xl border border-emerald-500/20">
-                      <p className="text-[9px] font-bold text-emerald-500 uppercase">CPA Moyen</p>
+                      <p className="text-[9px] font-bold text-emerald-500 uppercase">{t('avg_cpa')}</p>
                       <p className="text-sm font-black text-slate-900 dark:text-white">142 DA</p>
                    </div>
                    <div className="px-4 py-2 bg-primary/10 rounded-xl border border-primary/20">
-                      <p className="text-[9px] font-bold text-primary uppercase">ROAS Moyen</p>
+                      <p className="text-[9px] font-bold text-primary uppercase">{t('avg_roas')}</p>
                       <p className="text-sm font-black text-slate-900 dark:text-white">4.2x</p>
                    </div>
                 </div>
@@ -286,7 +286,7 @@ const DashboardInteractive = () => {
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                  <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-6">Cashflow Projeté (7 jours)</h5>
+                  <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-6">{t('projected_cashflow')}</h5>
                   <div className="flex items-end gap-3 h-32 px-2 relative">
                     <div className="absolute inset-x-0 top-0 h-px bg-slate-100 dark:bg-white/5" />
                     <div className="absolute inset-x-0 top-1/2 h-px bg-slate-100 dark:bg-white/5" />
@@ -295,31 +295,31 @@ const DashboardInteractive = () => {
                     ))}
                   </div>
                   <div className="flex justify-between mt-4 text-[8px] font-bold text-text-muted uppercase px-1">
-                    <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+                    <span>{t('mon')}</span><span>{t('tue')}</span><span>{t('wed')}</span><span>{t('thu')}</span><span>{t('fri')}</span><span>{t('sat')}</span><span>{t('sun')}</span>
                   </div>
                 </div>
                 <div className="glass-card p-8 bg-primary/5 border-primary/20 flex flex-col justify-center items-center text-center">
                    <Landmark className="w-12 h-12 text-primary mb-4" />
                    <h4 className="text-4xl font-black text-slate-900 dark:text-white">12,480,000 DA</h4>
-                   <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mt-2">Trésorerie Globale Disponible</p>
+                   <p className="text-[10px] font-bold text-text-muted uppercase tracking-widest mt-2">{t('global_treasury')}</p>
                 </div>
              </div>
              <div className="glass-card p-6 border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900/40">
-                <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-6">Derniers Transferts Entre-Boutiques</h5>
+                <h5 className="text-[10px] font-black text-text-muted uppercase tracking-widest mb-6">{t('latest_transfers')}</h5>
                 <div className="space-y-4">
                    {[
                      { from: 'Elite Electronics', to: 'Groupe Holding', amount: '2.4M DA', type: 'Profit Distribution' },
                      { from: 'Groupe Holding', to: 'Cosmetic Pro', amount: '800k DA', type: 'Stock Re-investment' },
-                   ].map((t, i) => (
+                   ].map((t_item, i) => (
                      <div key={i} className="flex items-center justify-between p-3 bg-slate-50 dark:bg-white/5 rounded-xl border border-slate-100 dark:border-white/5">
                         <div className="flex items-center gap-4">
                            <TrendingUp className="w-4 h-4 text-primary" />
                            <div>
-                              <div className="text-[11px] font-bold text-slate-900 dark:text-white">{t.from} &rarr; {t.to}</div>
-                              <div className="text-[9px] text-text-muted">{t.type}</div>
+                              <div className="text-[11px] font-bold text-slate-900 dark:text-white">{t_item.from} &rarr; {t_item.to}</div>
+                              <div className="text-[9px] text-text-muted">{t_item.type}</div>
                            </div>
                         </div>
-                        <div className="text-xs font-black text-emerald-500">{t.amount}</div>
+                        <div className="text-xs font-black text-emerald-500">{t_item.amount}</div>
                      </div>
                    ))}
                 </div>
@@ -345,7 +345,7 @@ const DashboardInteractive = () => {
             {t('dash_title')}
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto text-lg">
-            Commandez votre empire e-commerce depuis une interface unifiée.
+            {t('dashboard_desc')}
           </p>
         </div>
 
@@ -365,7 +365,7 @@ const DashboardInteractive = () => {
                 <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" />
                 <input 
                   type="text" 
-                  placeholder="Search empire data..." 
+                  placeholder={t('search_placeholder')} 
                   className="bg-slate-100 dark:bg-white/5 border-none rounded-full pl-9 pr-4 py-1.5 text-[11px] font-bold w-64 focus:ring-2 focus:ring-primary/20 transition-all"
                 />
               </div>
@@ -376,7 +376,7 @@ const DashboardInteractive = () => {
                 <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-rose-500 rounded-full border border-white dark:border-slate-900" />
               </button>
               <button className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 dark:bg-white/5 rounded-full text-[10px] font-bold text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
-                <Download className="w-3.5 h-3.5" /> Export Data
+                <Download className="w-3.5 h-3.5" /> {t('export_data')}
               </button>
               <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[10px] font-black text-white shadow-lg shadow-primary/20">EM</div>
             </div>
@@ -385,7 +385,7 @@ const DashboardInteractive = () => {
           <div className="flex flex-1 overflow-hidden">
             {/* Sidebar / Tabs */}
             <div className="w-64 border-r border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-black/20 flex flex-col py-6">
-              <p className="px-6 text-[10px] font-black text-text-muted uppercase tracking-widest mb-4">Command Cockpit</p>
+              <p className="px-6 text-[10px] font-black text-text-muted uppercase tracking-widest mb-4">{t('command_cockpit')}</p>
               <div className="space-y-1 px-3">
                 {tabs.map((tab) => (
                   <button
@@ -408,9 +408,9 @@ const DashboardInteractive = () => {
                 <div className="p-4 bg-primary/5 border border-primary/20 rounded-2xl">
                    <div className="flex items-center gap-2 mb-2">
                       <TrendingUp className="w-4 h-4 text-primary" />
-                      <p className="text-[10px] font-black text-primary uppercase tracking-widest">Empire Sync</p>
+                      <p className="text-[10px] font-black text-primary uppercase tracking-widest">{t('empire_sync_title')}</p>
                    </div>
-                   <p className="text-[9px] text-text-muted leading-relaxed font-bold">All 12 stores are currently synchronized across 4 regions.</p>
+                   <p className="text-[9px] text-text-muted leading-relaxed font-bold">{t('empire_sync_desc')}</p>
                 </div>
               </div>
             </div>
@@ -420,8 +420,8 @@ const DashboardInteractive = () => {
               <div className="max-w-5xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                   <div>
-                    <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">{activeTab} Overview</h3>
-                    <p className="text-xs text-text-muted font-bold">Real-time data stream for your enterprise group.</p>
+                    <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">{activeTab} {t('overview')}</h3>
+                    <p className="text-xs text-text-muted font-bold">{t('real_time_stream')}</p>
                   </div>
                   <div className="flex gap-2">
                     <button className="p-2 border border-slate-200 dark:border-white/10 rounded-lg text-text-muted hover:bg-slate-50 dark:hover:bg-white/5 transition-colors"><Filter className="w-4 h-4" /></button>

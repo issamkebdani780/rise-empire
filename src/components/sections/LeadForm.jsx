@@ -50,7 +50,7 @@ const LeadForm = () => {
 
             <div className="relative z-10 p-6 bg-black/10 rounded-xl mt-12 border border-white/10">
               <p className="text-sm italic">
-                "Nous ne cherchons pas des clients, mais des partenaires de croissance. RiseManager Enterprise est une solution d'élite pour les opérateurs d'élite."
+                "{t('partner_growth')}"
               </p>
             </div>
           </div>
